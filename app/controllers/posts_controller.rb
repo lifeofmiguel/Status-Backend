@@ -4,13 +4,21 @@ class PostsController < ApplicationController
   # GET /posts
   def index
     @posts = Post.all
-
-    render json: @posts, include: :comments
+    
+    render json: @posts, except: [:created_at, :updated_at], include: {
+      comments: {
+        except: [:created_at, :updated_at]
+      }
+    }
   end
 
   # GET /posts/1
   def show
-    render json: @post
+    render json: @post, except: [:created_at, :updated_at], include: {
+      comments: {
+        except: [:created_at, :updated_at]
+      }
+    }
   end
 
   # POST /posts
