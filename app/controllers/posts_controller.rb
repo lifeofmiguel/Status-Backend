@@ -3,6 +3,7 @@ class PostsController < ApplicationController
 
   # GET /posts
   def index
+    # render json: Post.all.map {|post| PostSerializer.new(post)}
     @posts = Post.all
     
     render json: @posts, except: [:created_at, :updated_at], include: {
@@ -26,6 +27,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
 
     if @post.save
+      # render json: PostSerializer.new(posts)
       render json: @post, status: :created, location: @post
     else
       render json: @post.errors, status: :unprocessable_entity

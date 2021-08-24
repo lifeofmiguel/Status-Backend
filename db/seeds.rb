@@ -15,39 +15,39 @@
 # second_post = Post.create(second_post)
 # third_post = Post.create(third_post)
 
-first_post = Post.create(
-    name: "Miguel",
-    age: 20,
-    mood: "Content",
-    status: "Feeling relaxed at the moment"
-)
+# first_post = Post.create(
+#     name: "Miguel",
+#     age: 20,
+#     mood: "Content",
+#     status: "Feeling relaxed at the moment"
+# )
 
-first_post.comments.create(
-    content: "Being relaxed is good"
-)
+# first_post.comments.create(
+#     content: "Being relaxed is good"
+# )
 
-second_post = Post.create(
-    name: "John",
-    age: 25,
-    mood: "Excited",
-    status: "Feeling excited at the moment"
-)
+# second_post = Post.create(
+#     name: "John",
+#     age: 25,
+#     mood: "Excited",
+#     status: "Feeling excited at the moment"
+# )
 
-second_post.comments.create(
-    content: "Being excited is good"
-)
+# second_post.comments.create(
+#     content: "Being excited is good"
+# )
 
-third_post = Post.create(
-    name: "Leo",
-    age: 23,
-    mood: "Nervous",
-    status: "Feeling nervous at the moment"
-)
+# third_post = Post.create(
+#     name: "Leo",
+#     age: 23,
+#     mood: "Nervous",
+#     status: "Feeling nervous at the moment"
+# )
 
-third_post.comments.create(
-    content: "Being nervous is not good"
-)
+# third_post.comments.create(
+#     content: "Being nervous is not good"
+# )
 
-first_post.save
-second_post.save
-third_post.save
+# first_post.save
+# second_post.save
+# third_post.save

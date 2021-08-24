@@ -21,10 +21,7 @@ ActiveRecord::Schema.define(version: 2021_08_13_172606) do
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string "name"
-    t.integer "age"
-    t.text "mood"
-    t.text "status"
+    t.string "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
